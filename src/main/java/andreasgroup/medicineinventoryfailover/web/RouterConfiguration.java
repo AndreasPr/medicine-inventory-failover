@@ -17,7 +17,7 @@ public class RouterConfiguration {
 
     @Bean
     public RouterFunction inventoryRoute(InventoryHandler inventoryHandler){
-        return route(GET("/inventory-failover").and(accept(MediaType.APPLICATION_JSON))
+        return route(GET("/medicine-inventory-failover").and(accept(MediaType.APPLICATION_JSON))
                 ,inventoryHandler::listInventory);
     }
 }
